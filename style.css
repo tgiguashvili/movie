@@ -22,13 +22,20 @@ flex-wrap: wrap;
 gap: 15px;
 }
 
-.movie{
-    width: 350px;
+.movies{
+    width: 250px;
+    /* ert xazze mainc ar gasworda */
+    height: 850px;
 
 }
 
+.blue{
+    background-color: blue;
+}
+
 .movie-content-box  {
-    font-size: 20px;
+    overflow: hidden;
+    height: 500px;
     margin-bottom: 10px;
     font-weight: bold;
     color: white;

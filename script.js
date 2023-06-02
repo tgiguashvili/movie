@@ -30,7 +30,7 @@ function showMovies (movies) {
         movieEl.classList.add("movie")
 
         movieEl.innerHTML = `
-        <div class="movie">
+        <div class="movies">
         <img src="${IMG_PATH + movie.poster_path}">
         <div class="movie-content-box">
         <h3>${movie.title}</h3>
@@ -48,6 +48,17 @@ function showMovies (movies) {
     });
 
 }
+
+// let blue = document.querySelectorAll(".blue")
+
+// function getvote(vote_average){
+//     if vote_average <= 5 {
+//         return blue;
+//     }
+// }
+
+
+
 //IMG(IMG_PATH)
 //async function IMG(url) {
  //   console.log(url)
