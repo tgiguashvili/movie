@@ -35,27 +35,37 @@ function showMovies (movies) {
         <div class="movie-content-box">
         <h3>${movie.title}</h3>
         <p>${movie.overview}</p>
-        <p>${movie.original_language}</p>
+        <p class="lang">${movie.original_language}</p>
         <span>
-        <p>${movie.vote_average}</p>
+        <p class="${getVote(movie.vote_average)}">${movie.vote_average}</p>
         </span>
 
         </div>
         </div>
         `
-        main.appendChild(movieEl)
+        main.appendChild(movieEl);
+
+        movieEl.addEventListener("click", () => {
+            localStorage.setItem("movie", JSON.stringify(movie));
+            window.location = "movie.html"
+        });
+        
         
     });
 
 }
 
-// let blue = document.querySelectorAll(".blue")
+let blue = document.querySelectorAll(".blue")
 
-// function getvote(vote_average){
-//     if vote_average <= 5 {
-//         return blue;
-//     }
-// }
+function getVote(vote){
+    if (vote >= 7) {
+        return "green"
+    }
+    else if(vote < 7){
+        return "blue"
+    }
+}
+
 
 
 
